@@ -1,0 +1,30 @@
+[
+    {
+        "id":"1",
+        "name":"fastrack",
+        "category":"watches",
+        "price":"100",
+        "img":"https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"
+    },
+    {
+        "id":"2",
+        "name":"adidas",
+        "category":"digital",
+        "price":"1001",
+        "img":"https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"
+    },
+    {
+        "id":"3",
+        "name":"sonata",
+        "category":"watches",
+        "price":"1002",
+        "img":"https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"
+    },
+    {
+        "id":"4",
+        "name":"NavyForce",
+        "category":"clock",
+        "price":"1003",
+        "img":"https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"
+    }
+]
