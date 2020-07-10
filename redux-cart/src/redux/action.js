@@ -1,4 +1,4 @@
-import {ADD_TO_CART,ADD_TO_ORDER} from "./actionType";
+import {ADD_TO_CART,ADD_TO_ORDER, ADD_PRODUCTS, INCREMENT, DECREMENT} from "./actionType";
 
 export const addToCart=(payload)=>{
     return{
@@ -11,5 +11,24 @@ export const addToOrders=(payload)=>{
     return{
         type:ADD_TO_ORDER,
         payload:payload
+    }
+}
+
+export const addProducts=(payload)=>{
+    return{
+        type: ADD_PRODUCTS,
+        payload
+    }
+}
+export const increment=(payload)=>{
+    return{
+        type: INCREMENT,
+        payload
+    }
+}
+export const decrement=(payload)=>{
+    return{
+        type: DECREMENT,
+        payload
     }
 }

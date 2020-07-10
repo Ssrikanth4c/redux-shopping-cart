@@ -4,7 +4,7 @@
         "name":"fastrack",
         "category":"watches",
         "price":"100",
-	"description": "Adding a sense of pride to every man wearing it is this spectacular watch with a unique camouflage design on it."
+	"description": "Adding a sense of pride to every man wearing it is this spectacular watch with a unique camouflage design on it.",
         "img":"https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"
     },
     {
@@ -12,7 +12,7 @@
         "name":"adidas",
         "category":"digital",
         "price":"1001",
-	"description":"The border of the dial has a lighter shade of plain black and houses indices in a stylish orange colour showing the quarterly in numbers."
+	"description":"The border of the dial has a lighter shade of plain black and houses indices in a stylish orange colour showing the quarterly in numbers.",
         "img":"https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"
     },
     {
@@ -20,7 +20,7 @@
         "name":"sonata",
         "category":"watches",
         "price":"1002",
-	"description":"The watch is water resistant so no matter what your adventure is, this watch completes your look and keeps it stylish. "
+	"description":"The watch is water resistant so no matter what your adventure is, this watch completes your look and keeps it stylish. ",
         "img":"https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"
     },
     {
@@ -28,6 +28,7 @@
         "name":"NavyForce",
         "category":"clock",
         "price":"1003",
+        "description":"The watch is water resistant so no matter what your adventure is, this watch completes your look and keeps it stylish. ",
         "img":"https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"
     }
 ]

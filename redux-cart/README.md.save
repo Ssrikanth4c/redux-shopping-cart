@@ -34,8 +34,8 @@ Shopping Cart Component:
 
 Product Page: (/product)
 
-    Admin should be able to see list of all prodcuts 
-    products create a new category option should also be in this page
+    Admin should be able to see list of all prodcuts products
+    create a new category option should also be in this page
     make a /product/add for adding a new product
     make a /product/:id to see product details
     make a /product/:id/edit for edit product page
@@ -48,7 +48,7 @@ Products should contain the following information:
     Description
     Category
     Image url / image (default image should be given)
-
+	
 ## Part-5
 
 Cart Page: /cart:
@@ -61,7 +61,7 @@ Cart Page: /cart:
 
 ## Part-6
 
-#### Orders Page: /orders
+ #### Orders Page: /orders
 
     Should list all the orders with product information in a meaningful way
 

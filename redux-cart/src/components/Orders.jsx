@@ -6,7 +6,7 @@ class Orders extends Component {
     render() {
         const {data}=this.props
         return (
-            <div>
+            <div className='container'>
                 {
                     data && data.map((ele,index)=>{
                         return(

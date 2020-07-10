@@ -16,9 +16,12 @@ class Home extends Component {
             option:e.target.value
         })
     }
+    componentDidUpdate(){
+        console.log(this.props.data)
+    }
 
     render() {
-        const {data,addToCart,cartArray}=this.props
+        const {data,addToCart,cartArray, isAuth}=this.props
         return (
             <div className="container row">
                 <div className="col">
@@ -38,7 +41,7 @@ class Home extends Component {
                                 return true
                         }).map((ele,index)=>{
                             return(
-                                <SingleItem key={index} data={ele} addToCart={addToCart} />
+                                <SingleItem key={index} data={ele} isAuth={isAuth} addToCart={addToCart} />
                             )
                         })
                     }
@@ -47,7 +50,7 @@ class Home extends Component {
                     {
                         cartArray && cartArray.map((ele,index)=>{
                             return(
-                                <SingleItem key={index} data={ele} />
+                                <SingleItem key={index} data={ele}  />
                             )
                         })
                     }
@@ -60,6 +63,7 @@ class Home extends Component {
 const mapStateToProps =state=>{
     return {
         data:state.data,
+        isAuth:state.isAuth,
         cartArray:state.cartArray,
     }
 }
