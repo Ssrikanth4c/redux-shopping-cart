@@ -3,6 +3,10 @@ import SingleItem from "./SingleItem";
 import {connect} from "react-redux";
 
 class Orders extends Component {
+    componentDidMount(){
+        console.log('ordddd')
+        console.log(this.props)
+    }
     render() {
         const {data}=this.props
         return (

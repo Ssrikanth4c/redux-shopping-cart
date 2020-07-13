@@ -42,6 +42,8 @@ const reducer=(state=initState,{type,payload})=>{
         }
 
         case ADD_TO_ORDER:{
+            console.log('ordris:')
+            console.log(payload)
             return{
                 ...state,
                 orderArray:[...state.orderArray,payload]
