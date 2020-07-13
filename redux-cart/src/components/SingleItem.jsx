@@ -57,7 +57,7 @@ export default class SingleItem extends React.Component {
                                                     onClick={
                                                         ()=> {
                                                             return(
-                                                                this.state.isAuth?
+                                                                isAuth?
                                                                 addToCart(data.id):this.toggleAuth()
                                                             )
                                                         }

@@ -1,11 +1,22 @@
-import {ADD_TO_CART,ADD_TO_ORDER, ADD_PRODUCTS, INCREMENT, DECREMENT} from "./actionType";
+import {ADD_TO_CART,ADD_TO_ORDER, ADD_PRODUCTS,USER_VALIDATION, INCREMENT, DECREMENT} from "./actionType";
 import data from "../data.json";
 const initState={
     data:data,
     categories:[],
     cartArray:[],
     orderArray:[],
-    isAuth:false
+    isAuth:false,
+    userDetails:[
+        {
+            username:'sree',
+            password:'sree'
+        },
+        {
+            username: 'srikanth',
+            password:'srikanth'
+        }
+    ],
+    loginUser:''
 }
 const reducer=(state=initState,{type,payload})=>{
     switch(type){
@@ -63,6 +74,23 @@ const reducer=(state=initState,{type,payload})=>{
             }
         }
 
+        case USER_VALIDATION:{
+            let flag='false', users= state.userDetails
+            console.log(payload)
+            // check user vlidation
+            users.forEach(user=>{
+                if(user.username === payload.username && user.password === payload.password){
+                    flag=true;
+                    state.loginUser=user.username
+                } 
+            })
+            if(flag){
+                state.isAuth=true;
+            }
+            return{
+                ...state
+            }
+        }
         default:{
             return {...state};
         }

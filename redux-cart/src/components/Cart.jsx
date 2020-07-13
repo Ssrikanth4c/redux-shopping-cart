@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
 import {addToOrders, increment, decrement} from "../redux/action";
-// import './fontAwesome/fontAwesome';
+// import './fontAwesome/fontawesome';
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Cart extends Component {
@@ -14,11 +14,14 @@ class Cart extends Component {
             address:''
         }
     }
+    componentDidUpdate(){
+        console.log(this.props.cartArray)
+    }
     render(){
         return(
             <div className='container'>
                 {/* Display cart items */}
-                        
+                
             </div>
         )
     }
