@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {Link} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import {addToOrders, increment, decrement} from "../redux/action";
 import './fontAwesome/fontawesome';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,10 +11,11 @@ class Cart extends Component {
         this.state={
             name:'',
             mobile:'',
-            address:''
+            address:'',
+            orderFlag:false
         }
     }
-    componentDidMount(){
+    componentDidUpdate(){
         console.log(this.props.data)
     }
     handleChange=e=>{
@@ -24,11 +25,15 @@ class Cart extends Component {
     }
     handleSubmit=e=>{
         e.preventDefault()
-        addToOrders([...this.state, ...this.props.data])
-        console.log(this.state)
+        this.props.addToOrders({name:this.state.name,address:this.state.address,mobile:this.state.mobile, data:this.props.data})
+        console.log(this.props)
+        this.setState({orderFlag:true})
     }
     render(){
         const {data,increment, decrement}= this.props
+        if(this.state.orderFlag){
+            return <Redirect to='/order'/>
+        }else
         return(
             <div className='container'>
                 {/* Display cart items */}
@@ -87,9 +92,7 @@ class Cart extends Component {
                             <input type="text" className="form-control text-center" name="mobile" placeholder='Mobile Number' autoComplete='off' onChange={this.handleChange}/>
                         </div>
                     </div>
-                    <Link to='/order'>
                         <button type="submit" className="btn btn-outline-success">Add To Orders</button>
-                    </Link>
                 </form>
             </div>
         )

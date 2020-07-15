@@ -4,8 +4,8 @@ import {connect} from "react-redux";
 
 class Orders extends Component {
     componentDidMount(){
-        console.log('ordddd')
-        console.log(this.props)
+        console.log('orders')
+        console.log(this.props.data)
     }
     render() {
         const {data}=this.props
@@ -15,8 +15,11 @@ class Orders extends Component {
                     data && data.map((ele,index)=>{
                         return(
                             <div key={index}>
-                                <h1>{ele.name}</h1>
-                                <h1>{ele.address}</h1>
+				<div className='flex-d'>
+                                	<div className='flex-1'><h1>{ele.name}</h1></div>
+                                	<div className='flex-1'><h1>{ele.address}</h1></div>
+					<div className='flex-1'><h1>{ele.mobile}</h1></div>
+				</div>
                                 {
                                     ele.data.map((item,ind)=>{
                                         return(
